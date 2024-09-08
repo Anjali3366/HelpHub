@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FaUserCircle, FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 
@@ -25,10 +26,18 @@ function Header() {
       </div>
 
       <div className="hidden md:flex gap-10 items-center text-[16px] font-semibold">
-        <span>Home</span>
-        <span>About</span>
-        <span>Service</span>
-        <span>Contact</span>
+        <NavLink to={"/"}>
+          <span>Home</span>
+        </NavLink>
+        <NavLink to={"/about"}>
+          <span>About</span>
+        </NavLink>
+        <NavLink to={"/service"}>
+          <span>Service</span>
+        </NavLink>
+        <NavLink to={"/contact"}>
+          <span>Contact</span>
+        </NavLink>
       </div>
 
       {isMenuOpen && (
@@ -36,18 +45,26 @@ function Header() {
           <p className="mb-5">
             <span>Login</span> / <span>Singup</span>
           </p>
-          <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
-            Home
-          </span>
-          <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
-            About
-          </span>
-          <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
-            Service
-          </span>
-          <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
-            Contact
-          </span>
+          <NavLink to={"/"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Home
+            </span>
+          </NavLink>
+          <NavLink to={"/about"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              About
+            </span>
+          </NavLink>
+          <NavLink to={"/service"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Service
+            </span>
+          </NavLink>
+          <NavLink to={"/contact"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Contact
+            </span>
+          </NavLink>
         </div>
       )}
 
@@ -65,7 +82,7 @@ function Header() {
         <FaUserCircle size={30} className="cursor-pointer" />
       </div>
 
-      <div className="md:hidden flex gap-10 items-center">
+      <div className="md:hidden flex gap-5 items-center">
         <FaSearch
           size={20}
           className="cursor-pointer"
