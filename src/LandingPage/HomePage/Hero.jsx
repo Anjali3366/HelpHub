@@ -10,7 +10,7 @@ function Hero() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % 4);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -25,14 +25,28 @@ function Hero() {
           <img
             src="/public/Electricion.png"
             alt="img1"
-            className="object-cover w-full bg-center"
+            className="object-cover w-full bg-center opacity-45"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
-          <h1 className="text-[55px] font-bold text-red-500">
+          <h1
+            className="text-[45px] font-bold text-[#FED766]"
+            style={{
+              fontFamily: "Rowdies, sans-serif",
+              fontWeight: 700,
+              fontStyle: "normal",
+            }}
+          >
             Home Services at Your Doorstep
           </h1>
-          <p className="text-xl text-white my-5">
+          <p
+            className="text-[18px] text-[#EFF1F3] my-5"
+            style={{
+              fontFamily: "Oleo Script, system-ui",
+              fontWeight: 400,
+              fontStyle: "normal",
+            }}
+          >
             Get professional, reliable, and affordable home services from
             skilled experts near you. Whether it's plumbing, electrical work,
             cleaning, or repairs, we handle it all with care and precision. Book
@@ -47,14 +61,28 @@ function Hero() {
           <img
             src="/public/Plumber.jpg"
             alt="img1"
-            className="object-cover w-full bg-center"
+            className="object-cover w-full bg-center opacity-45"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
-          <h1 className="text-[55px] font-bold text-amber-500">
+          <h1
+            className="text-[45px] font-bold text-[#FED766]"
+            style={{
+              fontFamily: "Rowdies, sans-serif",
+              fontWeight: 700,
+              fontStyle: "normal",
+            }}
+          >
             Home Services at Your Doorstep
           </h1>
-          <p className="text-xl text-white my-5">
+          <p
+            className="text-[18px] text-[#EFF1F3] my-5"
+            style={{
+              fontFamily: "Oleo Script, system-ui",
+              fontWeight: 400,
+              fontStyle: "normal",
+            }}
+          >
             Get professional, reliable, and affordable home services from
             skilled experts near you. Whether it's plumbing, electrical work,
             cleaning, or repairs, we handle it all with care and precision. Book
@@ -69,14 +97,28 @@ function Hero() {
           <img
             src="/public/Mechanic.png"
             alt="img1"
-            className="object-cover w-full bg-center"
+            className="object-cover w-full bg-center opacity-45"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
-          <h1 className="text-[55px] font-bold text-amber-500">
+          <h1
+            className="text-[45px] font-bold text-[#FED766]"
+            style={{
+              fontFamily: "Rowdies, sans-serif",
+              fontWeight: 700,
+              fontStyle: "normal",
+            }}
+          >
             Home Services at Your Doorstep
           </h1>
-          <p className="text-xl text-white my-5">
+          <p
+            className="text-[18px] text-[#EFF1F3] my-5"
+            style={{
+              fontFamily: "Oleo Script, system-ui",
+              fontWeight: 400,
+              fontStyle: "normal",
+            }}
+          >
             Get professional, reliable, and affordable home services from
             skilled experts near you. Whether it's plumbing, electrical work,
             cleaning, or repairs, we handle it all with care and precision. Book
@@ -91,14 +133,28 @@ function Hero() {
           <img
             src="/public/Carpenter.avif"
             alt="img1"
-            className="object-cover w-full bg-center"
+            className="object-cover w-full bg-center opacity-45"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
-          <h1 className="text-[55px] font-bold text-amber-500">
+          <h1
+            className="text-[45px] font-bold text-[#FED766]"
+            style={{
+              fontFamily: "Rowdies, sans-serif",
+              fontWeight: 700,
+              fontStyle: "normal",
+            }}
+          >
             Home Services at Your Doorstep
           </h1>
-          <p className="text-xl text-white my-5">
+          <p
+            className="text-[18px] text-[#EFF1F3] my-5"
+            style={{
+              fontFamily: "Oleo Script, system-ui",
+              fontWeight: 400,
+              fontStyle: "normal",
+            }}
+          >
             Get professional, reliable, and affordable home services from
             skilled experts near you. Whether it's plumbing, electrical work,
             cleaning, or repairs, we handle it all with care and precision. Book
