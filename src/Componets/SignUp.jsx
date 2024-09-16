@@ -2,8 +2,8 @@ import React from "react";
 
 function SignUp() {
   return (
-    <div className="bg-[url(./login4.jpg)] bg-cover w-[70vh] theme-bg-2 h-[55vh] text-white">
-      <div className="relative bg-[#0e3531f1] h-[55vh]  pt-9">
+    <div className="bg-[url(./SignUpBg.jpg)] bg-cover w-[70vh] theme-bg-2 h-[55vh] text-white">
+      <div className="relative bg-[#0e3531dd] h-[55vh]  pt-9">
         <h3 className="text-white text-2xl font-semibold text-center">
           Get Started with <span>Help</span>
           <span className="text-amber-300">Hub</span>
