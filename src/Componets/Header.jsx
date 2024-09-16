@@ -20,8 +20,8 @@ function Header() {
   return (
     <div className="w-full h-[65px] flex justify-between items-center shadow md:px-16 px-5">
       <div>
-        <h1 className="text-3xl font-bold text-[#1230AE]">
-          Help<span className="text-amber-400">Hub</span>
+        <h1 className="text-3xl font-bold text-[#0e3531]">
+          Help<span className="text-amber-300">Hub</span>
         </h1>
       </div>
 
