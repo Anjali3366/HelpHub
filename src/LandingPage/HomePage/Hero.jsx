@@ -25,7 +25,7 @@ function Hero() {
           <img
             src="/public/Electricion.png"
             alt="img1"
-            className="object-cover w-full bg-center opacity-45"
+            className="object-cover w-full bg-center opacity-30"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
@@ -61,7 +61,7 @@ function Hero() {
           <img
             src="/public/Plumber.jpg"
             alt="img1"
-            className="object-cover w-full bg-center opacity-45"
+            className="object-cover w-full bg-center opacity-30"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
@@ -97,7 +97,7 @@ function Hero() {
           <img
             src="/public/Mechanic.png"
             alt="img1"
-            className="object-cover w-full bg-center opacity-45"
+            className="object-cover w-full bg-center opacity-30"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">
@@ -133,7 +133,7 @@ function Hero() {
           <img
             src="/public/Carpenter.avif"
             alt="img1"
-            className="object-cover w-full bg-center opacity-45"
+            className="object-cover w-full bg-center opacity-30"
           />
         </div>
         <div className="absolute top-[30%] right-[20%] left-[20%] flex flex-col items-center justify-center">

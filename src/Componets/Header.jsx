@@ -29,11 +29,11 @@ function Header() {
         <NavLink to={"/"}>
           <span>Home</span>
         </NavLink>
-        <NavLink to={"/about"}>
-          <span>About</span>
-        </NavLink>
         <NavLink to={"/service"}>
           <span>Service</span>
+        </NavLink>
+        <NavLink to={"/about"}>
+          <span>About</span>
         </NavLink>
         <NavLink to={"/contact"}>
           <span>Contact</span>
