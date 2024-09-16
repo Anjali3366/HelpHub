@@ -79,15 +79,20 @@ function Header() {
           <input className="w-[150px] outline-none" placeholder="Search.." />
           <FaSearch size={20} className="cursor-pointer" />
         </div>
-        <FaUserCircle size={30} className="cursor-pointer" />
+        <NavLink to={"/login"}>
+          <FaUserCircle size={30} className="cursor-pointer" />
+        </NavLink>
       </div>
 
       <div className="md:hidden flex gap-5 items-center">
-        <FaSearch
-          size={20}
-          className="cursor-pointer"
-          onClick={hendleSearchToggle}
-        />
+        <NavLink to={"/login"}>
+          <FaSearch
+            size={20}
+            className="cursor-pointer"
+            onClick={hendleSearchToggle}
+          />
+        </NavLink>
+
         <IoMenu
           size={30}
           className="md:hidden cursor-pointer"
