@@ -8,6 +8,7 @@ import Home from "./LandingPage/HomePage/Home";
 import About from "./LandingPage/AboutPage/About";
 import Service from "./LandingPage/ServicePage/Service";
 import Contact from "./LandingPage/ContactPage/Contact";
+import SignUp from "./Componets/SignUp";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<SignUp/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
