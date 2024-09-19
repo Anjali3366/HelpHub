@@ -1,9 +1,14 @@
 import React from "react";
-
+import { MdClose } from "react-icons/md";
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md'; 
 function SignUp() {
   return (
     <div className="bg-[url(./SignUpBg.jpg)] bg-cover w-[70vh] theme-bg-2 h-[55vh] text-white">
       <div className="relative bg-[#0e3531dd] h-[55vh]  pt-9">
+
+      <div className="text-2xl absolute right-6 top-6">
+<MdClose />
+</div>
         <h3 className="text-white text-2xl font-semibold text-center">
           Get Started with <span>Help</span>
           <span className="text-amber-300">Hub</span>
@@ -16,7 +21,7 @@ function SignUp() {
             </label>{" "}
             <br />
             <input
-              className="rounded-md py-1 px-2 w-[25rem] shadow-sm"
+              className="rounded-md py-1 px-2 w-[25rem] shadow-sm text-black"
               type="text"
               id="name"
               placeholder="Email..."
@@ -29,7 +34,7 @@ function SignUp() {
               </label>{" "}
               <br />
               <input
-                className="rounded-md py-1 px-2"
+                className="rounded-md py-1 px-2 text-black"
                 type="text"
                 id="firstName"
                 placeholder=" First name..."
@@ -43,7 +48,7 @@ function SignUp() {
               </label>{" "}
               <br />
               <input
-                className="rounded-md py-1 px-2"
+                className="rounded-md py-1 px-2 text-black"
                 type="text"
                 id="LastName"
                 placeholder="Last name..."
@@ -56,7 +61,7 @@ function SignUp() {
             </label>{" "}
             <br />
             <input
-              className="rounded-md py-1 px-2 w-[25rem]"
+              className="rounded-md py-1 px-2 w-[25rem] text-black"
               type="password"
               id="name"
               placeholder="Password..."
