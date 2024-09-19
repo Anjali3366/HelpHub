@@ -4,8 +4,10 @@ import { MdEmail } from "react-icons/md";
 import { FaUnlockAlt } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
+import { Link } from "react-router-dom";
 function Login() {
-  const [showPassword, setShowPassword] = usestate(false);
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="bg-[url(./loginBg.jpg)] bg-cover w-[60vh] theme-bg-2 h-[50vh] text-white rounded-md">
       <div className="relative bg-black/25 backdrop-blur-md h-[50vh]  pt-9">
@@ -47,16 +49,16 @@ function Login() {
              <button
         type="button"
         onClick={() => setShowPassword(!showPassword)}
-        className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 focus:outline-none"
+        className="absolute pt-3 right-24 text-gray-500 focus:outline-none"
       >
         {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
       </button>
           </div>
-          <p className="text-xs ml-[14rem] text-amber-300 font-semibold">
+          <p className="text-xs ml-[14rem] text-amber-300 font-semibold cursor-pointer">
     Forget Password ?
         </p>
         
-          <button className="bg-amber-300 hover:bg-gradient-to-b hover:from-amber-400 hover:to-[#0e3531] mt-5 px-8 py-2 rounded-sm font-semibold  transition-transform hover:ease-out duration-300 ">
+          <button className="bg-amber-300  mt-5 px-8 py-2 rounded-sm font-semibold   ">
   Login
 </button>
         </form>
@@ -64,7 +66,7 @@ function Login() {
         <p className="text-xs text-center mt-2 text-[#e7dddd]">
           Don't have an account ? 
        
-          <span className="text-amber-300"> Register</span>
+          <a href="/signup"className="text-amber-300 cursor-pointer"> Register</a>
         </p>
       </div>
     </div>
