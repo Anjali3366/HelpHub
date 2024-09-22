@@ -1,13 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'; 
-function SignUp() {
+function SignUp({onClose}) {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
-    <div className="bg-[url(./SignUpBg.jpg)] bg-cover w-[70vh] theme-bg-2 h-[55vh] text-white">
+  <div className="fixed inset-0 z-50 bg-transparent backdrop-blur-lg flex justify-center items-center transition-opacity duration-300 ">
+      <div className="bg-[url(./SignUpBg.jpg)] bg-cover w-[70vh] theme-bg-2 h-[55vh] text-white">
       <div className="relative bg-[#0e3531dd] h-[55vh]  pt-9">
 
       <div className="text-2xl absolute right-6 top-6">
-<MdClose />
+<MdClose onClick={onClose} className="cursor-pointer" />
 </div>
         <h3 className="text-white text-2xl font-semibold text-center">
           Get Started with <span>Help</span>
@@ -62,10 +66,19 @@ function SignUp() {
             <br />
             <input
               className="rounded-md py-1 px-2 w-[25rem] text-black"
-              type="password"
+              type={showPassword ? "text":"password"}
               id="name"
               placeholder="Password..."
+
+             
             />
+             <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute pt-3 right-24 text-gray-500 focus:outline-none"
+            >
+              {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+            </button>
           </div>
           <button className="bg-amber-300   mt-5 px-8 py-2 rounded-sm font-semibold  ">
   Sign up
@@ -79,6 +92,7 @@ function SignUp() {
         </p>
       </div>
     </div>
+  </div>
   );
 }
 
