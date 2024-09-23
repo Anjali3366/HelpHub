@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { FaUserCircle, FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
+import Login from "./Login";
+import Button from "./Button";
+import SignUp from "./SignUp";
 
 function Header({ scrollToSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const handleMenuToggle = () => {
+  const hendleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsSearchOpen(false);
   };
@@ -15,7 +18,10 @@ function Header({ scrollToSection }) {
     setIsSearchOpen(!isSearchOpen);
     setIsMenuOpen(false);
   };
-
+  const handleSignUp = () => {
+    setIsSignUp(true);
+    setShowLogin(false);
+  };
   return (
     <div className="w-full h-[65px] flex justify-between items-center shadow md:px-16 px-5">
       <div>
@@ -78,7 +84,9 @@ function Header({ scrollToSection }) {
           <input className="w-[150px] outline-none" placeholder="Search.." />
           <FaSearch size={20} className="cursor-pointer" />
         </div>
-        <FaUserCircle size={30} className="cursor-pointer" />
+        <NavLink to={"/login"}>
+          <FaUserCircle size={30} className="cursor-pointer" />
+        </NavLink>
       </div>
 
       <div className="md:hidden flex gap-5 items-center">

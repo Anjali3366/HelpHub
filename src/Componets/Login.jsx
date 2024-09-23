@@ -5,14 +5,15 @@ import { FaUnlockAlt } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
 import { Link } from "react-router-dom";
-function Login() {
+function Login({onClose, handleSignUp}) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="bg-[url(./loginBg.jpg)] bg-cover w-[60vh] theme-bg-2 h-[50vh] text-white rounded-md">
+   <div className="fixed inset-0  bg-tranparent backdrop-blur-lg z-50 flex justify-center items-center transition-opacity duration-300 ">
+     <div className=" bg-[url(./loginBg.jpg)] bg-cover w-[60vh] theme-bg-2 h-[50vh] text-white rounded-md">
       <div className="relative bg-black/25 backdrop-blur-md h-[50vh]  pt-9">
 <div className="text-2xl absolute right-6 top-6">
-<MdClose />
+<MdClose onClick={onClose} className="cursor-pointer"/>
 </div>
 
 
@@ -66,14 +67,15 @@ function Login() {
         <p className="text-xs text-center mt-2 text-[#e7dddd]">
           Don't have an account ? 
        
-          <a href="/signup"className="text-amber-300 cursor-pointer"> Register</a>
+          <a  className="text-amber-300 cursor-pointer" onClick={handleSignUp}> Register</a>
         </p>
       </div>
     </div>
+   </div>
   );
 }
 
 export default Login;
-// green color : #0e3531;
+// green color : ;
 // yellow color: amber-300;
 
