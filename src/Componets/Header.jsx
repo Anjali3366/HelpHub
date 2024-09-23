@@ -1,20 +1,22 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FaUserCircle, FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import Login from "./Login";
 import Button from "./Button";
 import SignUp from "./SignUp";
 
-function Header({ scrollToSection }) {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const hendleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsSearchOpen(false);
   };
 
-  const handleSearchToggle = () => {
+  const hendleSearchToggle = () => {
     setIsSearchOpen(!isSearchOpen);
     setIsMenuOpen(false);
   };
@@ -31,45 +33,45 @@ function Header({ scrollToSection }) {
       </div>
 
       <div className="hidden md:flex gap-10 items-center text-[16px] font-semibold">
-        <span onClick={() => scrollToSection("home")}>Home</span>
-        <span onClick={() => scrollToSection("about")}>About</span>
-        <span onClick={() => scrollToSection("service")}>Service</span>
-        <span onClick={() => scrollToSection("contact")}>Contact</span>
+        <NavLink to={"/"}>
+          <span>Home</span>
+        </NavLink>
+        <NavLink to={"/service"}>
+          <span>Service</span>
+        </NavLink>
+        <NavLink to={"/about"}>
+          <span>About</span>
+        </NavLink>
+        <NavLink to={"/contact"}>
+          <span>Contact</span>
+        </NavLink>
       </div>
 
       {isMenuOpen && (
         <div className="md:hidden absolute top-[68px] right-2 left-[35%] flex flex-col items-center text-[16px] font-semibold py-3 bg-white shadow-lg">
           <p className="mb-5">
-            <span>Login</span> / <span>Signup</span>
+            <span>Login</span> / <span>Singup</span>
           </p>
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("home")}
-          >
-            Home
-          </span>
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </span>
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("service")}
-          >
-            Service
-          </span>
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </span>
+          <NavLink to={"/"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Home
+            </span>
+          </NavLink>
+          <NavLink to={"/about"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              About
+            </span>
+          </NavLink>
+          <NavLink to={"/service"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Service
+            </span>
+          </NavLink>
+          <NavLink to={"/contact"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Contact
+            </span>
+          </NavLink>
         </div>
       )}
 
@@ -84,21 +86,37 @@ function Header({ scrollToSection }) {
           <input className="w-[150px] outline-none" placeholder="Search.." />
           <FaSearch size={20} className="cursor-pointer" />
         </div>
-        <NavLink to={"/login"}>
-          <FaUserCircle size={30} className="cursor-pointer" />
-        </NavLink>
+        <div>
+          {showLogin ? (
+            <Login
+              onClose={() => setShowLogin(false)}
+              handleSignUp={handleSignUp}
+            />
+          ) : (
+            <Button
+              name="Login/Sign.."
+              onClick={() => {
+                setShowLogin(true);
+              }}
+            />
+          )}
+          {isSignUp && <SignUp onClose={() => setIsSignUp(false)} />}
+        </div>
       </div>
 
       <div className="md:hidden flex gap-5 items-center">
-        <FaSearch
-          size={20}
-          className="cursor-pointer"
-          onClick={handleSearchToggle}
-        />
+        <NavLink to={"/login"}>
+          <FaSearch
+            size={20}
+            className="cursor-pointer"
+            onClick={hendleSearchToggle}
+          />
+        </NavLink>
+
         <IoMenu
           size={30}
           className="md:hidden cursor-pointer"
-          onClick={handleMenuToggle}
+          onClick={hendleMenuToggle}
         />
       </div>
     </div>
