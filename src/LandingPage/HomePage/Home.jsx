@@ -7,9 +7,7 @@ import Footer from "../../Componets/Footer";
 function Home() {
   return (
     <div>
-      <Header />
       <Hero />
-      <Footer />
     </div>
   );
 }
