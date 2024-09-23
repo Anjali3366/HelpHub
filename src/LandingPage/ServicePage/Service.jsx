@@ -19,10 +19,43 @@ function Service() {
         </h1>
       </div>
 
-      <div className="flex">
-        <ServiceCart />
-        <ServiceCart />
-        <ServiceCart />
+      <div className="grid grid-cols-3 gap-8 px-24 mb-20">
+        <ServiceCart
+          image="/public/Electricion.png"
+          name="Electricion"
+          details=""
+          rating=""
+        />
+        <ServiceCart
+          image="/public/Plumber.jpg"
+          name="Plumber"
+          details=""
+          rating=""
+        />
+        <ServiceCart
+          image="/public/Carpenter.avif"
+          name="Carpanter"
+          details=""
+          rating=""
+        />
+        <ServiceCart
+          image="/public/Mechanic.png"
+          name="Machanic"
+          details=""
+          rating=""
+        />
+        <ServiceCart
+          image="/public/Painter.jpg"
+          name="Painter"
+          details=""
+          rating=""
+        />
+        <ServiceCart
+          image="/public/Cleaner.webp"
+          name="Cleaner"
+          details=""
+          rating=""
+        />
       </div>
     </div>
   );
