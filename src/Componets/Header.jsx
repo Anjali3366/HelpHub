@@ -4,8 +4,9 @@ import { IoMenu } from "react-icons/io5";
 import Login from "./Login";
 import Button from "./Button";
 import SignUp from "./SignUp";
+import { NavLink } from "react-router-dom";
 
-function Header({ scrollToSection }) {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
@@ -32,13 +33,19 @@ function Header({ scrollToSection }) {
       </div>
 
       <div className="hidden md:flex gap-10 items-center text-[16px] font-semibold">
-        <span onClick={() => scrollToSection("home")}>Home</span>
-
-        <span onClick={() => scrollToSection("service")}>Service</span>
-
-        <span onClick={() => scrollToSection("about")}>About</span>
-
-        <span onClick={() => scrollToSection("contact")}>Contact</span>
+        <NavLink to={"/"}>
+          <span>Home</span>
+        </NavLink>
+        <NavLink to={"about"}>
+          <span>About</span>
+        </NavLink>
+        <NavLink to={"service"}>
+          <span>Service</span>
+        </NavLink>
+        <NavLink to={"contact"}>
+          {" "}
+          <span>Contact</span>
+        </NavLink>
       </div>
 
       {isMenuOpen && (
@@ -46,37 +53,28 @@ function Header({ scrollToSection }) {
           <p className="mb-5">
             <span>Login</span> / <span>Singup</span>
           </p>
-
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("home")}
-          >
-            Home
-          </span>
-
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("service")}
-          >
-            Service
-          </span>
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </span>
-
-          <span
-            className="my-1"
-            onClickCapture={() => setIsMenuOpen(false)}
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </span>
+          <NavLink to={"/"}>
+            {" "}
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Home
+            </span>
+          </NavLink>
+          <NavLink to={"about"}>
+            {" "}
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              About
+            </span>
+          </NavLink>
+          <NavLink to={"service"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Service
+            </span>
+          </NavLink>
+          <NavLink to={"contact"}>
+            <span className="my-1" onClickCapture={() => setIsMenuOpen(false)}>
+              Contact
+            </span>
+          </NavLink>
         </div>
       )}
 

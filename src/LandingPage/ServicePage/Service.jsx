@@ -3,7 +3,7 @@ import ServiceCart from "./ServiceCart";
 
 function Service() {
   return (
-    <div className="w-screen h-screen flex flex-col items-center py-10">
+    <div className="w-screen h-auto flex flex-col items-center py-10">
       <div>
         <h1 className="text-3xl text-black font-bold p-8">
           Home
