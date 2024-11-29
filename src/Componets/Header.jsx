@@ -89,7 +89,7 @@ function Header() {
           <input className="w-[150px] outline-none" placeholder="Search.." />
           <FaSearch size={20} className="cursor-pointer" />
         </div>
-        <div className="mb-5">
+        <div>
           {showLogin ? (
             <Login
               onClose={() => setShowLogin(false)}

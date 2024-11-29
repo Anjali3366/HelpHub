@@ -3,23 +3,18 @@ import ServiceCart from "./ServiceCart";
 
 function Service() {
   return (
-    <div className="w-screen h-auto flex flex-col items-center py-10">
-      <div>
-        <h1 className="text-3xl text-black font-bold p-8">
-          Home
-          <span
-            className="bg-blue-600 text-white px-10 py-2"
-            style={{
-              clipPath:
-                "polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%)",
-            }}
-          >
-            Service
-          </span>
-        </h1>
+    <div className="w-screen h-auto flex flex-col items-center">
+      <div className="w-full h-[400px] bg-cover bg-[url(./service.avif)] opacity-80 flex items-center px-[12%]">
+        <div className="w-[500px] opacity-100">
+          <h1 className="text-[40px] font-bold mb-2">Services</h1>
+          <p className="text-[18px] font-medium">
+            We offer a comprehensive range of Home & Commercial cleaning
+            services.
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 px-24 mb-20">
+      <div className="grid grid-cols-3 gap-10 px-28 my-16">
         <ServiceCart
           image="/public/Electricion.png"
           name="Electricion"

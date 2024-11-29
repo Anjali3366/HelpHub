@@ -1,5 +1,6 @@
 import React from "react";
 import { IoStar, IoStarHalf } from "react-icons/io5";
+import GreenBtn from "../../Componets/GreenBtn";
 
 function ServiceCart({ image, name, details, rating }) {
   return (
@@ -12,28 +13,18 @@ function ServiceCart({ image, name, details, rating }) {
         />
       </div>
 
-      <div className="mt-4">
-        <div className="flex justify-between items-center mt-3 mb-2">
-          <h1 className="text-xl font-bold text-gray-800">{name}</h1>
+      <div className="mt-3 px-1">
+        <h1 className="text-xl font-bold text-gray-800 mb-1">{name}</h1>
+        <p className="text-gray-600">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <div className="flex justify-between items-center my-2 ">
+          <GreenBtn btnName="Service Now" />
           <div className="flex text-yellow-400">
-            {/* Dynamic Star Rating Implementation */}
             <IoStar size={20} />
             <IoStar size={20} />
             <IoStarHalf size={20} />
           </div>
-        </div>
-        <p className="text-gray-600">
-          {/* Replace with actual details or a fallback */}
-          {details ||
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit."}
-        </p>
-        <div className="flex justify-between items-center mt-4 mb-1">
-          <button className="bg-blue-500 w-[108px] h-[38px] text-white font-semibold rounded-md transition duration-300 hover:bg-blue-600 hover:scale-105">
-            View Details
-          </button>
-          <button className="bg-green-500 w-[108px] h-[38px] text-white font-semibold rounded-md transition duration-300 hover:bg-green-600 hover:scale-105">
-            Service Now
-          </button>
         </div>
       </div>
     </div>
